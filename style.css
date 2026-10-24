@@ -1,0 +1,18 @@
+:root {
+  --desk: #ede8de; --paper: #fffcf3; --text: #2f2c27; --muted: #7b715f; --navy: #253b57; --gold: #a47743; --rule: #e2d8c5;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --desk: #172331; --paper: #2a384c; --text: #e7e2d6; --muted: #b7b09f; --navy: #c9d6e3; --gold: #d6b47e; --rule: #34435a; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--desk); color: var(--text);
+  font: 16px/1.75 "Noto Sans KR", system-ui, -apple-system, "Apple SD Gothic Neo", sans-serif;
+}
+main { max-width: 720px; margin: 32px auto; padding: 36px 32px; background: var(--paper); border-radius: 10px; box-shadow: 0 6px 24px rgba(0, 0, 0, .08); }
+@media (max-width: 760px) { main { margin: 0; border-radius: 0; padding: 28px 16px; } }
+h1 { color: var(--navy); font-size: 28px; margin: 0 0 4px; }
+h2 { color: var(--navy); font-size: 18px; margin: 28px 0 6px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.lead { color: var(--muted); margin: 0 0 20px; }
+a { color: var(--gold); }
+footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; }
