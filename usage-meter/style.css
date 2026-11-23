@@ -1,5 +1,5 @@
-:root { --bg:#f7f5f0; --ink:#26221e; --muted:#6e665e; --accent:#c86442; --card:#ffffff; --line:#e6e0d6; }
-@media (prefers-color-scheme: dark) { :root { --bg:#1f1e1b; --ink:#f1ede6; --muted:#b5ada3; --accent:#ffb59b; --card:#2a2925; --line:#3a3833; } }
+:root { --bg:#f5f6f8; --ink:#15171c; --muted:#5d6370; --accent:#4a56c9; --card:#ffffff; --line:#e3e6ec; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e1014; --ink:#eef0f4; --muted:#979da9; --accent:#9aa4ff; --card:#171a1f; --line:#262a31; } }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
 main { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; }
