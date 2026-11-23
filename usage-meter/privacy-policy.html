@@ -1,64 +1,123 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>개인정보처리방침 · API 사용량 미터</title>
+<title>Privacy Policy · API Usage Meter</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-  <h1>개인정보처리방침</h1>
-  <p class="muted">앱: API 사용량 미터 (패키지 io.github.ashegyu.usagemeter) · 시행일: 2026년 11월 23일</p>
+  <nav class="lang"><a href="?lang=en" data-lang="en">English</a><a href="?lang=ko" data-lang="ko">한국어</a></nav>
 
-  <p>API 사용량 미터(이하 "앱")는 개인 개발자 AsheGyu(이하 "개발자")가 만든 앱입니다. 이 방침은 앱이 어떤 정보를 다루는지, 그리고 앱에 포함된 Google AdMob 광고가 어떤 정보를 수집하는지 설명합니다.</p>
+  <section data-section="en" lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="muted">App: API Usage Meter (package io.github.ashegyu.usagemeter) · Effective: November 23, 2026</p>
 
-  <h2>1. 개발자가 수집하는 정보</h2>
-  <p><strong>없습니다.</strong> 개발자는 서버를 운영하지 않으며, 사용자의 Admin API 키, 사용량·비용 데이터, 설정값을 받거나 저장하지 않습니다.</p>
+    <p>API Usage Meter (the "App") is made by AsheGyu, an individual developer (the "Developer"). This policy explains what information the App handles and what information the Google AdMob ads in the App collect.</p>
 
-  <h2>2. 기기 안에만 저장되는 정보</h2>
-  <table>
-    <tr><th>항목</th><th>저장 방식</th><th>용도</th></tr>
-    <tr><td>Anthropic Admin API 키</td><td>Android Keystore 기반 암호화 저장소(EncryptedSharedPreferences)</td><td>Anthropic API에서 조직 사용량·비용 조회</td></tr>
-    <tr><td>사용자가 입력한 크레딧 잔액·입력 시각, 알림 기준 금액, 화면 설정</td><td>앱 전용 저장소</td><td>추정 잔액 계산, 잔액 부족 알림</td></tr>
-    <tr><td>마지막 조회 결과(오늘 비용, 추정 잔액)</td><td>앱 전용 저장소</td><td>홈 화면 위젯 표시</td></tr>
-  </table>
-  <p>이 정보는 기기 백업(클라우드 백업, 기기 간 이전)에서 제외됩니다. 앱에서 키를 삭제하거나 앱을 삭제하면 함께 지워집니다.</p>
+    <h2>1. Information the Developer collects</h2>
+    <p><strong>None.</strong> The Developer runs no server and does not receive or store your Admin API key, usage or cost data, or settings.</p>
 
-  <h2>3. Anthropic으로 전송되는 정보</h2>
-  <p>사용량 조회를 위해 Admin API 키는 HTTPS로 <code>api.anthropic.com</code>에만 전송됩니다. 이 요청과 응답에는 Anthropic의 개인정보처리방침이 적용됩니다: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
+    <h2>2. Information stored only on your device</h2>
+    <table>
+      <tr><th>Item</th><th>How it is stored</th><th>Purpose</th></tr>
+      <tr><td>Anthropic Admin API key</td><td>Encrypted storage backed by Android Keystore (EncryptedSharedPreferences)</td><td>Reading your organization's usage and cost from the Anthropic API</td></tr>
+      <tr><td>Credit balance and the time you entered it, alert threshold, display settings</td><td>App-private storage</td><td>Estimating your balance and sending low-balance alerts</td></tr>
+      <tr><td>Last fetched results (today's cost, estimated balance)</td><td>App-private storage</td><td>Showing the home screen widget</td></tr>
+    </table>
+    <p>This information is excluded from device backups (cloud backup and device-to-device transfer). It is deleted when you delete the key in the App or uninstall the App.</p>
 
-  <h2>4. 광고 (Google AdMob)</h2>
-  <p>앱은 무료로 제공되며 Google AdMob 배너 광고를 표시합니다. 광고를 위해 Google이 다음 정보를 수집·처리할 수 있습니다.</p>
-  <ul>
-    <li>광고 ID(Android Advertising ID) 등 기기 식별자</li>
-    <li>IP 주소 및 이를 통한 대략적인 위치</li>
-    <li>기기·운영체제 정보, 앱 정보</li>
-    <li>광고 노출·클릭 등 상호작용 정보, 비정상 트래픽 방지를 위한 진단 정보</li>
-  </ul>
-  <p>이 정보는 광고 제공·성과 측정·부정 행위 방지 및 (동의한 경우) 맞춤형 광고에 쓰이며, Google의 정책에 따라 처리됩니다:
-    <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>,
-    <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 사이트에서의 데이터 사용</a>.</p>
-  <p>유럽경제지역(EEA)·영국·스위스 등 동의가 필요한 지역에서는 앱 실행 시 Google의 동의 관리 도구(UMP)로 동의를 받으며, 앱의 설정 화면 → "광고 개인정보 설정"에서 언제든 바꿀 수 있습니다. 모든 사용자는 Android 설정 → 개인정보 보호 → 광고에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
+    <h2>3. Information sent to Anthropic</h2>
+    <p>To read usage, your Admin API key is sent over HTTPS only to <code>api.anthropic.com</code>. Anthropic's privacy policy applies to those requests and responses: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
 
-  <h2>5. 제3자 제공</h2>
-  <p>개발자는 사용자 정보를 판매하거나 제3자에게 제공하지 않습니다. 위의 Anthropic(사용량 조회)과 Google(광고) 외에 정보가 전송되는 곳은 없습니다.</p>
+    <h2>4. Advertising (Google AdMob)</h2>
+    <p>The App is free and shows Google AdMob banner ads. For advertising, Google may collect and process:</p>
+    <ul>
+      <li>Device identifiers such as the Android Advertising ID</li>
+      <li>IP address and the approximate location derived from it</li>
+      <li>Device, operating system and app information</li>
+      <li>Ad interactions such as impressions and clicks, and diagnostics used to prevent invalid traffic</li>
+    </ul>
+    <p>This information is used to serve and measure ads, prevent fraud and, if you consent, personalize ads. It is processed under Google's policies:
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>,
+      <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
+    <p>In regions that require consent, such as the European Economic Area (EEA), the UK and Switzerland, the App asks for consent through Google's User Messaging Platform (UMP) when it starts. You can change your choice at any time in the App under Settings → "Ad privacy settings". Any user can reset or delete the advertising ID in Android Settings → Privacy → Ads.</p>
 
-  <h2>6. 아동</h2>
-  <p>앱은 Anthropic Console 조직 관리자를 위한 도구이며 만 14세 미만 아동을 대상으로 하지 않습니다.</p>
+    <h2>5. Sharing with third parties</h2>
+    <p>The Developer does not sell or share your information with third parties. No information is sent anywhere other than Anthropic (for usage lookups) and Google (for ads) as described above.</p>
 
-  <h2>7. 보안</h2>
-  <p>모든 통신은 HTTPS로만 이루어지며, Admin API 키는 화면·로그에 전체가 표시되지 않습니다. 다만 어떤 방법도 완전한 보안을 보장하지는 않으므로, 이 앱 전용 Admin 키를 만들고 만료일을 설정하며, 기기를 분실한 경우 Anthropic Console에서 키를 즉시 삭제하시길 권장합니다.</p>
+    <h2>6. Children</h2>
+    <p>The App is a tool for Anthropic Console organization administrators and is not directed to children (under 13, or under 14 in Korea).</p>
 
-  <h2>8. 방침 변경</h2>
-  <p>내용이 바뀌면 이 페이지를 갱신하고 시행일을 고칩니다.</p>
+    <h2>7. Security</h2>
+    <p>All communication uses HTTPS only, and the full Admin API key is never shown on screen or written to logs. No method is perfectly secure, so we recommend creating a dedicated Admin key for this App with an expiration date, and deleting the key in the Anthropic Console right away if you lose your device.</p>
 
-  <h2>9. 문의</h2>
-  <p>이메일: <a href="mailto:worbswo@naver.com">worbswo@naver.com</a></p>
+    <h2>8. Changes to this policy</h2>
+    <p>If this policy changes, this page will be updated along with its effective date.</p>
 
-  <h2>English summary</h2>
-  <p>The developer runs no server and collects no data. Your Anthropic Admin API key is stored only on your device, encrypted with Android Keystore, and is sent only to api.anthropic.com over HTTPS. The app shows Google AdMob banner ads; Google may collect the advertising ID, IP address, device information and ad interactions as described in Google's privacy policy. Users in regions that require consent (EEA, UK, Switzerland) are asked via Google's UMP and can change their choice in Settings → "광고 개인정보 설정". The app is not directed to children. Contact: worbswo@naver.com</p>
+    <h2>9. Contact</h2>
+    <p>Email: <a href="mailto:worbswo@naver.com">worbswo@naver.com</a></p>
+  </section>
 
+  <section data-section="ko" lang="ko">
+    <h1>개인정보처리방침</h1>
+    <p class="muted">앱: API 사용량 미터 (패키지 io.github.ashegyu.usagemeter) · 시행일: 2026년 11월 23일</p>
+
+    <p>API 사용량 미터(이하 "앱")는 개인 개발자 AsheGyu(이하 "개발자")가 만든 앱입니다. 이 방침은 앱이 어떤 정보를 다루는지, 그리고 앱에 포함된 Google AdMob 광고가 어떤 정보를 수집하는지 설명합니다.</p>
+
+    <h2>1. 개발자가 수집하는 정보</h2>
+    <p><strong>없습니다.</strong> 개발자는 서버를 운영하지 않으며, 사용자의 Admin API 키, 사용량·비용 데이터, 설정값을 받거나 저장하지 않습니다.</p>
+
+    <h2>2. 기기 안에만 저장되는 정보</h2>
+    <table>
+      <tr><th>항목</th><th>저장 방식</th><th>용도</th></tr>
+      <tr><td>Anthropic Admin API 키</td><td>Android Keystore 기반 암호화 저장소(EncryptedSharedPreferences)</td><td>Anthropic API에서 조직 사용량·비용 조회</td></tr>
+      <tr><td>사용자가 입력한 크레딧 잔액·입력 시각, 알림 기준 금액, 화면 설정</td><td>앱 전용 저장소</td><td>추정 잔액 계산, 잔액 부족 알림</td></tr>
+      <tr><td>마지막 조회 결과(오늘 비용, 추정 잔액)</td><td>앱 전용 저장소</td><td>홈 화면 위젯 표시</td></tr>
+    </table>
+    <p>이 정보는 기기 백업(클라우드 백업, 기기 간 이전)에서 제외됩니다. 앱에서 키를 삭제하거나 앱을 삭제하면 함께 지워집니다.</p>
+
+    <h2>3. Anthropic으로 전송되는 정보</h2>
+    <p>사용량 조회를 위해 Admin API 키는 HTTPS로 <code>api.anthropic.com</code>에만 전송됩니다. 이 요청과 응답에는 Anthropic의 개인정보처리방침이 적용됩니다: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
+
+    <h2>4. 광고 (Google AdMob)</h2>
+    <p>앱은 무료로 제공되며 Google AdMob 배너 광고를 표시합니다. 광고를 위해 Google이 다음 정보를 수집·처리할 수 있습니다.</p>
+    <ul>
+      <li>광고 ID(Android Advertising ID) 등 기기 식별자</li>
+      <li>IP 주소 및 이를 통한 대략적인 위치</li>
+      <li>기기·운영체제 정보, 앱 정보</li>
+      <li>광고 노출·클릭 등 상호작용 정보, 비정상 트래픽 방지를 위한 진단 정보</li>
+    </ul>
+    <p>이 정보는 광고 제공·성과 측정·부정 행위 방지 및 (동의한 경우) 맞춤형 광고에 쓰이며, Google의 정책에 따라 처리됩니다:
+      <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>,
+      <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 사이트에서의 데이터 사용</a>.</p>
+    <p>유럽경제지역(EEA)·영국·스위스 등 동의가 필요한 지역에서는 앱 실행 시 Google의 동의 관리 도구(UMP)로 동의를 받으며, 앱의 설정 화면 → "광고 개인정보 설정"에서 언제든 바꿀 수 있습니다. 모든 사용자는 Android 설정 → 개인정보 보호 → 광고에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
+
+    <h2>5. 제3자 제공</h2>
+    <p>개발자는 사용자 정보를 판매하거나 제3자에게 제공하지 않습니다. 위의 Anthropic(사용량 조회)과 Google(광고) 외에 정보가 전송되는 곳은 없습니다.</p>
+
+    <h2>6. 아동</h2>
+    <p>앱은 Anthropic Console 조직 관리자를 위한 도구이며 만 14세 미만 아동을 대상으로 하지 않습니다.</p>
+
+    <h2>7. 보안</h2>
+    <p>모든 통신은 HTTPS로만 이루어지며, Admin API 키는 화면·로그에 전체가 표시되지 않습니다. 다만 어떤 방법도 완전한 보안을 보장하지는 않으므로, 이 앱 전용 Admin 키를 만들고 만료일을 설정하며, 기기를 분실한 경우 Anthropic Console에서 키를 즉시 삭제하시길 권장합니다.</p>
+
+    <h2>8. 방침 변경</h2>
+    <p>내용이 바뀌면 이 페이지를 갱신하고 시행일을 고칩니다.</p>
+
+    <h2>9. 문의</h2>
+    <p>이메일: <a href="mailto:worbswo@naver.com">worbswo@naver.com</a></p>
+  </section>
 </main>
+<script>
+(function () {
+  var p = new URLSearchParams(location.search).get("lang");
+  var l = (p === "ko" || p === "en") ? p : ((navigator.language || "").toLowerCase().indexOf("ko") === 0 ? "ko" : "en");
+  document.documentElement.lang = l;
+  document.querySelectorAll("[data-section]").forEach(function (s) { s.hidden = s.getAttribute("data-section") !== l; });
+  document.querySelectorAll("nav.lang a").forEach(function (a) { a.classList.toggle("active", a.getAttribute("data-lang") === l); });
+})();
+</script>
 </body>
 </html>

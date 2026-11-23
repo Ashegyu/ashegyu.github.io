@@ -9,3 +9,9 @@ p, li { color: var(--ink); } .muted { color: var(--muted); font-size: 14px; }
 a { color: var(--accent); }
 table { width:100%; border-collapse: collapse; font-size: 14px; } th, td { border:1px solid var(--line); padding:8px; text-align:left; vertical-align: top; }
 .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px; margin:16px 0; }
+nav.lang { display:flex; gap:8px; justify-content:flex-end; margin-bottom:16px; font-size:14px; }
+nav.lang a { padding:4px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--muted); }
+nav.lang a.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+section[data-section] + section[data-section] { margin-top:48px; }
+table { table-layout: fixed; } th, td { overflow-wrap: anywhere; word-break: break-word; }
+p, li, a, code { overflow-wrap: anywhere; }
