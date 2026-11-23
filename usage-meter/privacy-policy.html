@@ -22,14 +22,14 @@
     <h2>2. Information stored only on your device</h2>
     <table>
       <tr><th>Item</th><th>How it is stored</th><th>Purpose</th></tr>
-      <tr><td>Anthropic Admin API key</td><td>Encrypted storage backed by Android Keystore (EncryptedSharedPreferences)</td><td>Reading your organization's usage and cost from the Anthropic API</td></tr>
-      <tr><td>Credit balance and the time you entered it, alert threshold, display settings</td><td>App-private storage</td><td>Estimating your balance and sending low-balance alerts</td></tr>
+      <tr><td>Anthropic Admin API key</td><td>Encrypted storage backed by Android Keystore (EncryptedSharedPreferences)</td><td>Reading your organization's usage, cost, API key list and rate limits from the Anthropic API, and changing an API key's status or a workspace's rate limits when you ask the App to</td></tr>
+      <tr><td>Credit balance and the time you entered it, alert threshold, monthly and daily budgets, alert settings, display settings</td><td>App-private storage</td><td>Estimating your balance and sending low-balance, budget and spending spike alerts</td></tr>
       <tr><td>Last fetched results (today's cost, estimated balance)</td><td>App-private storage</td><td>Showing the home screen widget</td></tr>
     </table>
-    <p>This information is excluded from device backups (cloud backup and device-to-device transfer). It is deleted when you delete the key in the App or uninstall the App.</p>
+    <p>This information is excluded from device backups (cloud backup and device-to-device transfer). When you delete the key in the App, the key, the last fetched results, and the balance, threshold, budget and alert settings tied to that key are deleted; display preferences such as theme, language and data source are kept. Everything is deleted when you uninstall the App or clear its storage.</p>
 
     <h2>3. Information sent to Anthropic</h2>
-    <p>To read usage, your Admin API key is sent over HTTPS only to <code>api.anthropic.com</code>. Anthropic's privacy policy applies to those requests and responses: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
+    <p>To read usage and cost, list API keys and rate limits, deactivate or reactivate an API key, and set or clear a workspace's rate limits when you choose to (the only actions that change your organization, and only after you confirm them), your Admin API key is sent over HTTPS only to <code>api.anthropic.com</code>. Anthropic's privacy policy applies to those requests and responses: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
 
     <h2>4. Advertising (Google AdMob)</h2>
     <p>The App is free and shows Google AdMob banner ads. For advertising, Google may collect and process:</p>
@@ -45,7 +45,7 @@
     <p>In regions that require consent, such as the European Economic Area (EEA), the UK and Switzerland, the App asks for consent through Google's User Messaging Platform (UMP) when it starts. You can change your choice at any time in the App under Settings → "Ad privacy settings". Any user can reset or delete the advertising ID in Android Settings → Privacy → Ads.</p>
 
     <h2>5. Sharing with third parties</h2>
-    <p>The Developer does not sell or share your information with third parties. No information is sent anywhere other than Anthropic (for usage lookups) and Google (for ads) as described above.</p>
+    <p>The Developer does not sell or share your information with third parties. No information is sent anywhere other than Anthropic (for usage lookups and the API key and rate limit changes you request) and Google (for ads) as described above.</p>
 
     <h2>6. Children</h2>
     <p>The App is a tool for Anthropic Console organization administrators and is not directed to children (under 13, or under 14 in Korea).</p>
@@ -75,14 +75,14 @@
     <h2>2. 기기 안에만 저장되는 정보</h2>
     <table>
       <tr><th>항목</th><th>저장 방식</th><th>용도</th></tr>
-      <tr><td>Anthropic Admin API 키</td><td>Android Keystore 기반 암호화 저장소(EncryptedSharedPreferences)</td><td>Anthropic API에서 조직 사용량·비용 조회</td></tr>
-      <tr><td>사용자가 입력한 크레딧 잔액·입력 시각, 알림 기준 금액, 화면 설정</td><td>앱 전용 저장소</td><td>추정 잔액 계산, 잔액 부족 알림</td></tr>
+      <tr><td>Anthropic Admin API 키</td><td>Android Keystore 기반 암호화 저장소(EncryptedSharedPreferences)</td><td>Anthropic API에서 조직 사용량·비용·API 키 목록·Rate limit 조회, 사용자가 요청할 때 API 키 상태·워크스페이스 Rate limit 변경</td></tr>
+      <tr><td>사용자가 입력한 크레딧 잔액·입력 시각, 알림 기준 금액, 월·일 예산, 알림 설정, 화면 설정</td><td>앱 전용 저장소</td><td>추정 잔액 계산, 잔액 부족·예산·지출 급증 알림</td></tr>
       <tr><td>마지막 조회 결과(오늘 비용, 추정 잔액)</td><td>앱 전용 저장소</td><td>홈 화면 위젯 표시</td></tr>
     </table>
-    <p>이 정보는 기기 백업(클라우드 백업, 기기 간 이전)에서 제외됩니다. 앱에서 키를 삭제하거나 앱을 삭제하면 함께 지워집니다.</p>
+    <p>이 정보는 기기 백업(클라우드 백업, 기기 간 이전)에서 제외됩니다. 앱에서 키를 삭제하면 키, 마지막 조회 결과, 그리고 그 키에 연결된 잔액·알림 기준·예산·알림 설정이 지워지고, 테마·언어·데이터 소스 같은 화면 설정은 남습니다. 앱을 삭제하거나 앱 저장공간을 지우면 모두 지워집니다.</p>
 
     <h2>3. Anthropic으로 전송되는 정보</h2>
-    <p>사용량 조회를 위해 Admin API 키는 HTTPS로 <code>api.anthropic.com</code>에만 전송됩니다. 이 요청과 응답에는 Anthropic의 개인정보처리방침이 적용됩니다: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
+    <p>사용량·비용 조회, API 키 목록·Rate limit 조회, 그리고 사용자가 직접 선택해 확인했을 때의 API 키 비활성화·재활성화와 워크스페이스 Rate limit 설정·해제(조직 설정을 바꾸는 동작은 이 둘뿐)를 위해 Admin API 키는 HTTPS로 <code>api.anthropic.com</code>에만 전송됩니다. 이 요청과 응답에는 Anthropic의 개인정보처리방침이 적용됩니다: <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a></p>
 
     <h2>4. 광고 (Google AdMob)</h2>
     <p>앱은 무료로 제공되며 Google AdMob 배너 광고를 표시합니다. 광고를 위해 Google이 다음 정보를 수집·처리할 수 있습니다.</p>
@@ -98,7 +98,7 @@
     <p>유럽경제지역(EEA)·영국·스위스 등 동의가 필요한 지역에서는 앱 실행 시 Google의 동의 관리 도구(UMP)로 동의를 받으며, 앱의 설정 화면 → "광고 개인정보 설정"에서 언제든 바꿀 수 있습니다. 모든 사용자는 Android 설정 → 개인정보 보호 → 광고에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
 
     <h2>5. 제3자 제공</h2>
-    <p>개발자는 사용자 정보를 판매하거나 제3자에게 제공하지 않습니다. 위의 Anthropic(사용량 조회)과 Google(광고) 외에 정보가 전송되는 곳은 없습니다.</p>
+    <p>개발자는 사용자 정보를 판매하거나 제3자에게 제공하지 않습니다. 위의 Anthropic(사용량 조회와 사용자가 요청한 API 키·Rate limit 변경)과 Google(광고) 외에 정보가 전송되는 곳은 없습니다.</p>
 
     <h2>6. 아동</h2>
     <p>앱은 Anthropic Console 조직 관리자를 위한 도구이며 만 14세 미만 아동을 대상으로 하지 않습니다.</p>
