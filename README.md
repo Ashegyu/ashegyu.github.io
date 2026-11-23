@@ -23,3 +23,10 @@ Play 스토어에 필요한 공개 페이지 세 가지를 담은 정적 사이�
 6. AdMob → 앱 → app-ads.txt 탭에서 확인(크롤링에 최대 24시간 정도 걸린다).
 
 게시 전 `index.html`, `privacy.html`의 (운영자 이름)·(연락 이메일)·(날짜)를 채운다. 공개 페이지이므로 공개해도 되는 연락처를 쓴다.
+
+## API 사용량 미터 (`usage-meter/`)
+
+두 번째 앱의 페이지는 하위 폴더에 둔다. `app-ads.txt`는 도메인 루트에 하나만 두면 되고, 같은 AdMob 게시자 ID를 쓰므로 두 앱이 함께 쓴다.
+
+- https://ashegyu.github.io/usage-meter/ : 앱 소개 (Play 등록정보의 개발자 웹사이트)
+- https://ashegyu.github.io/usage-meter/privacy-policy.html : 개인정보처리방침
