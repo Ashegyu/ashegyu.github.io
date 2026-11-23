@@ -30,3 +30,11 @@ Play 스토어에 필요한 공개 페이지 세 가지를 담은 정적 사이�
 
 - https://ashegyu.github.io/usage-meter/ : 앱 소개 (Play 등록정보의 개발자 웹사이트)
 - https://ashegyu.github.io/usage-meter/privacy-policy.html : 개인정보처리방침
+
+## Oath of the Hunt (`oath-of-the-hunt/`)
+
+세 번째 앱(게임). 영어·한국어 전환은 usage-meter와 같은 방식. 페이지는 게임 저장소(`beast-hunter`)의 `tools/legal-pages/`에서 만든다 — 한국어 방침은 앱 안 방침 파일(`android/app/src/main/res/raw/privacy_policy.md`)과 같은 글.
+
+- https://ashegyu.github.io/oath-of-the-hunt/ : 앱 소개
+- https://ashegyu.github.io/oath-of-the-hunt/privacy-policy.html : 개인정보처리방침 (Play Console 개인정보처리방침 URL)
+- https://ashegyu.github.io/oath-of-the-hunt/data-deletion.html : 계정 삭제 안내 (Play Console 데이터 보안 → 계정 삭제 URL)

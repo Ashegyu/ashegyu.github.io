@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oath of the Hunt · Oath of the Hunt</title>
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<main>
+  <nav class="lang"><a href="?lang=en" data-lang="en">English</a><a href="?lang=ko" data-lang="ko">한국어</a></nav>
+
+  <section data-section="en" lang="en">
+    <h1>Oath of the Hunt</h1>
+    <p class="muted">A landscape 2D action RPG for Android — hunt beasts across 60 chapters with nine hunters</p>
+    <div class="card">
+      <ul>
+        <li>Auto-battling hunts across 60 chapters, normal · elite · nightmare difficulties</li>
+        <li>Nine hunters, each with their own weapon, skills, job advancement and growth schools</li>
+        <li>Gear with affixes, crafting, runes, raids, boss rush, the endless tower and blighted maps</li>
+        <li>Weekly DPS leaderboard and asynchronous duels against other hunters' builds</li>
+      </ul>
+      <p>Play offline, or sign in with Google to keep your progress on our server. No paid purchases; optional rewarded ads.</p>
+    </div>
+    <p><a href="privacy-policy.html?lang=en">Privacy Policy</a> · <a href="data-deletion.html?lang=en">Delete your account</a></p>
+    <p class="muted">Contact: <a href="mailto:worbswo@naver.com">worbswo@naver.com</a> · AsheGyu</p>
+  </section>
+
+  <section data-section="ko" lang="ko">
+    <h1>Oath of the Hunt</h1>
+    <p class="muted">괴수를 사냥하는 안드로이드 가로 화면 2D 액션 RPG — 사냥꾼 아홉 명과 60개 장</p>
+    <div class="card">
+      <ul>
+        <li>60개 장을 자동 전투로 사냥, 일반 · 정예 · 악몽 난이도</li>
+        <li>무기·스킬·전직·성장 학파가 저마다 다른 사냥꾼 아홉 명</li>
+        <li>옵션 장비와 다듬기, 룬, 레이드, 보스 러시, 무한의 탑, 오염된 사냥터</li>
+        <li>주간 DPS 순위와 다른 사냥꾼의 빌드와 겨루는 비동기 대전</li>
+      </ul>
+      <p>로그인 없이 기기에서 플레이하거나, 구글로 로그인해 서버에 기록을 이어 갈 수 있습니다. 유료 결제는 없고 보상형 광고는 선택입니다.</p>
+    </div>
+    <p><a href="privacy-policy.html?lang=ko">개인정보처리방침</a> · <a href="data-deletion.html?lang=ko">계정 삭제 안내</a></p>
+    <p class="muted">문의: <a href="mailto:worbswo@naver.com">worbswo@naver.com</a> · AsheGyu</p>
+  </section>
+</main>
+<script>
+(function () {
+  // 오래된 브라우저·인앱 브라우저에서도 동작하도록 ES5 문법만 사용
+  function pick() {
+    var m = /[?&]lang=(ko|en)\b/.exec(location.search);
+    if (m) return m[1];
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || "";
+    return nav.toLowerCase().indexOf("ko") === 0 ? "ko" : "en";
+  }
+  function apply(l) {
+    document.documentElement.setAttribute("lang", l);
+    var secs = document.querySelectorAll("[data-section]");
+    for (var i = 0; i < secs.length; i++) {
+      var show = secs[i].getAttribute("data-section") === l;
+      secs[i].style.display = show ? "" : "none";
+      if (show) secs[i].removeAttribute("hidden"); else secs[i].setAttribute("hidden", "");
+    }
+    var links = document.querySelectorAll("nav.lang a");
+    for (var j = 0; j < links.length; j++) {
+      var on = links[j].getAttribute("data-lang") === l;
+      links[j].className = on ? "active" : "";
+      links[j].setAttribute("aria-current", on ? "true" : "false");
+    }
+  }
+  var links = document.querySelectorAll("nav.lang a");
+  for (var k = 0; k < links.length; k++) {
+    links[k].onclick = function (e) {
+      var l = this.getAttribute("data-lang");
+      apply(l);
+      try { history.replaceState(null, "", "?lang=" + l + location.hash); } catch (err) {}
+      window.scrollTo(0, 0);
+      if (e && e.preventDefault) e.preventDefault();
+      return false;
+    };
+  }
+  apply(pick());
+})();
+</script>
+</body>
+</html>
