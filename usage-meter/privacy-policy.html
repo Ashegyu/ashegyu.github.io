@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · API Usage Meter</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <main>
@@ -112,11 +112,40 @@
 </main>
 <script>
 (function () {
-  var p = new URLSearchParams(location.search).get("lang");
-  var l = (p === "ko" || p === "en") ? p : ((navigator.language || "").toLowerCase().indexOf("ko") === 0 ? "ko" : "en");
-  document.documentElement.lang = l;
-  document.querySelectorAll("[data-section]").forEach(function (s) { s.hidden = s.getAttribute("data-section") !== l; });
-  document.querySelectorAll("nav.lang a").forEach(function (a) { a.classList.toggle("active", a.getAttribute("data-lang") === l); });
+  // 오래된 브라우저·인앱 브라우저에서도 동작하도록 ES5 문법만 사용
+  function pick() {
+    var m = /[?&]lang=(ko|en)\b/.exec(location.search);
+    if (m) return m[1];
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || "";
+    return nav.toLowerCase().indexOf("ko") === 0 ? "ko" : "en";
+  }
+  function apply(l) {
+    document.documentElement.setAttribute("lang", l);
+    var secs = document.querySelectorAll("[data-section]");
+    for (var i = 0; i < secs.length; i++) {
+      var show = secs[i].getAttribute("data-section") === l;
+      secs[i].style.display = show ? "" : "none";
+      if (show) secs[i].removeAttribute("hidden"); else secs[i].setAttribute("hidden", "");
+    }
+    var links = document.querySelectorAll("nav.lang a");
+    for (var j = 0; j < links.length; j++) {
+      var on = links[j].getAttribute("data-lang") === l;
+      links[j].className = on ? "active" : "";
+      links[j].setAttribute("aria-current", on ? "true" : "false");
+    }
+  }
+  var links = document.querySelectorAll("nav.lang a");
+  for (var k = 0; k < links.length; k++) {
+    links[k].onclick = function (e) {
+      var l = this.getAttribute("data-lang");
+      apply(l);
+      try { history.replaceState(null, "", "?lang=" + l + location.hash); } catch (err) {}
+      window.scrollTo(0, 0);
+      if (e && e.preventDefault) e.preventDefault();
+      return false;
+    };
+  }
+  apply(pick());
 })();
 </script>
 </body>
